@@ -3,7 +3,7 @@
 
 
 Solving phase 1 is quite simple and the information provided in the pdf is very instructive. The idea is to get the program execute <touch1> after completing the 
-execution for <getbuf>. One creative solution for this is to overwrite the current return address of <getbuf> with the address of <touch1>. So the first step is to 
+execution for getbuf. One creative solution for this is to overwrite the current return address of getbuf with the address of touch1. So the first step is to 
 get the runtime address of the <touch1> (see ss 8.1) using gdb to break the execution during runtime.  
 
 &nbsp;
@@ -21,7 +21,7 @@ callee-saved registers. Right above the callee-saved registers lays the return a
   
 &nbsp;
   
-To truly understand the stack frame of the <getbuf> . We would have to see the disassembled version of <getbuf> (see ss 8.2). Luckily <getbuf> is a quite simple function, 
+To truly understand the stack frame of the getbuf . We would have to see the disassembled version of getbuf (see ss 8.2). Luckily <getbuf> is a quite simple function, 
 and the only data it stores in its stackframe is the char array of the size of BUFFER_SIZE , which in target24 it happened to be 24 bytes. 
   
 &nbsp;
