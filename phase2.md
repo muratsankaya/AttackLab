@@ -13,7 +13,7 @@ consists of two lines of x86-64 code that is decoded into sequences of hexadecim
 &nbsp;  
   
 Continuing from the <getbuf> procedure which is detailed in the phase_1 solution, when getbuf is called the exploit string must input data 
-in a way that when the program tries to return from getbuf should jump to the beginning of of the instructions that set %rdi a to the value of the cookies. Then jump to the beginning of touch2. 
+in a way that when the program tries to return from getbuf should jump to the beginning of the instructions that sets %rdi to the value of the cookie. Then jump to the beginning of touch2. 
 
 &nbsp;
   
